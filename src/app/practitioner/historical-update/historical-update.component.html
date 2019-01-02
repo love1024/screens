@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="heading">
+    <span>Practitioner</span>
+    <span class="name">{{name}}</span>
+    <span>- updates</span>
+  </div>
+  <div class="name">Practice updates</div>
+  <section id="table-container">
+    <mat-table #table
+      [dataSource]="dataSource1">
+      <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Date | date}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="updatedBy">
+        <mat-header-cell *matHeaderCellDef> Updated by </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.UpdatedBy}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="updates">
+        <mat-header-cell *matHeaderCellDef> Updates </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Info }} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </section>
+
+  <div class="name">Registration Authority updates</div>
+  <section id="table-container">
+    <mat-table #table
+      [dataSource]="dataSource2">
+      <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Date | date}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="updatedBy">
+        <mat-header-cell *matHeaderCellDef> Updated by </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.UpdatedBy}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="updates">
+        <mat-header-cell *matHeaderCellDef> Updates </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Info }} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </section>
+
+  <div class="name">Other info updates</div>
+  <section id="table-container">
+    <mat-table #table
+      [dataSource]="dataSource3">
+      <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Date | date}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="updatedBy">
+        <mat-header-cell *matHeaderCellDef> Updated by </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.UpdatedBy}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="updates">
+        <mat-header-cell *matHeaderCellDef> Updates </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Info }} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </section>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="heading">
+    <span>Practitioner</span>
+    <span class="name">{{name}}</span>
+    <span>- summary</span>
+  </div>
+  <div>
+    <div>Family Doctor</div>
+    <div>Medical Council of Ireland</div>
+  </div>
+
+  <div class="info">
+    <div class="row">
+      <div>status</div>
+      <div>{{info?.Status}}</div>
+    </div>
+    <div class="row">
+      <div>Practices at</div>
+      <div>
+        <div *ngFor="let info of info?info['PracticesAt']?.split(','):info">{{info + ","}}</div>
+        <div>Phone: {{info?info['ContactDetails']['PersonalPhoneNumber']:''}},</div>
+        <div>Email: {{info?info['ContactDetails']['PersonalEmail']:''}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div>Other info</div>
+      <div>
+        <div *ngFor="let info of info?info['OtherInfo']?.split(','):info">{{info + ","}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div>GSRN</div>
+      <div>{{info?.GSRN}}</div>
+    </div>
+  </div>
+</div>

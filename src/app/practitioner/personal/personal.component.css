@@ -1,0 +1,22 @@
+#form-container {
+  padding: 20px;
+}
+
+.full-width {
+  display: block;
+  width: 40%;
+}
+
+.submit-btn {
+    background-color: #519CBC;
+    color: white;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.heading {
+  margin: 20px 0;
+}

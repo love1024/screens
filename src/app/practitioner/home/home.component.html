@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <h1>Service Directory: Practitioner</h1>
+    <div class="practitioner-img">
+      <img src="assets/practitioner.png" />
+    </div>
+  </div>
+  <mat-tab-group>
+    <mat-tab label="Summary">
+      <app-summary></app-summary>
+    </mat-tab>
+    <mat-tab label="Edit: Personal Details">
+      <app-personal></app-personal>
+    </mat-tab>
+    <mat-tab label="Edit: Practices at">
+      <app-location></app-location>
+    </mat-tab>
+    <mat-tab label="Edit: Other info">
+      <app-other-info></app-other-info>
+    </mat-tab>
+    <mat-tab label="Historical updates">
+      <ng-template matTabContent>
+        <app-historical-update></app-historical-update>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

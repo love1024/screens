@@ -1,0 +1,17 @@
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.heading {
+  margin: 20px 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+.add-extra {
+  margin-top: 20px;
+}

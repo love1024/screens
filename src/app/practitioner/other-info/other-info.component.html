@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="heading">
+    <span>Practitioner</span>
+    <span class="name">{{name}}</span>
+    <span>- other information</span>
+  </div>
+  <div>
+    <div class="bold">PCRS ID = {{info?.PCRSID}}</div>
+    <div>{{info?info['PracticesAt']:''}}</div>
+    <div class="bold">{{info?info['OtherInfo']:''}}</div>
+  </div>
+  <div class="add-extra">
+    <button color="warn"
+      mat-raised-button
+      type="submit">Add new information</button>
+  </div>
+</div>

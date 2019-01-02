@@ -1,0 +1,78 @@
+<div id="form-container"
+  mat-dialog-content>
+
+  <div class="heading">
+    <span>Practitioner</span>
+    <span class="name">{{name}}</span>
+    <span>- personal details</span>
+  </div>
+
+  <form [formGroup]="inputForm"
+    (ngSubmit)="onSubmit(inputForm.valid)">
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="Title"
+        placeholder="Title"
+        type="text">
+      <mat-error *ngIf="inputForm.get('Title').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="FirstName"
+        placeholder="First Name"
+        type="text">
+      <mat-error *ngIf="inputForm.get('FirstName').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="SecondName"
+        placeholder="Second Name"
+        type="text">
+      <mat-error *ngIf="inputForm.get('SecondName').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="FamilyName"
+        placeholder="Family Name"
+        type="text">
+      <mat-error *ngIf="inputForm.get('FamilyName').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <div formGroupName="ContactDetails">
+      <mat-form-field class="full-width">
+        <input matInput
+          formControlName="PersonalPhoneNumber"
+          placeholder="Personal Mobile"
+          type="number">
+        <mat-error *ngIf="inputForm.get('ContactDetails').get('PersonalPhoneNumber').hasError('required')">Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput
+          formControlName="PersonalEmail"
+          placeholder="Personal Email"
+          type="email">
+        <mat-error *ngIf="inputForm.get('ContactDetails').get('PersonalEmail').hasError('required')">Required</mat-error>
+      </mat-form-field>
+    </div>
+    
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="MCRN"
+        placeholder="Known as"
+        type="text">
+      <mat-error *ngIf="inputForm.get('MCRN').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <div>
+      <br>
+      <button color="primary"
+        mat-raised-button
+        type="submit">Update</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,13 @@
+.container {
+  width: 90%;
+  margin: 100px auto;
+}
+
+.row {
+  display: flex;
+}
+
+.practitioner-img {
+  margin-left: 10px;
+}
+
