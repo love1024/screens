@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule} from '@angular/router';
 import { PractitionerModule } from './practitioner/practitioner.module';
+import { HomeComponent } from './core/home/home.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { PractitionerModule } from './practitioner/practitioner.module';
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      {path: '', redirectTo: 'practitioner', pathMatch: 'full'}
+      {path: '', component: HomeComponent}
     ]),
-    PractitionerModule
+    PractitionerModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
