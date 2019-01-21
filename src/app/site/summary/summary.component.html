@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="heading">
+    <span>Location</span>
+    <span class="name">{{name}}</span>
+  </div>
+  <div>
+    <div>Family Doctor</div>
+    <div>Medical Council of Ireland</div>
+  </div>
+
+  <div class="info">
+    <div class="row">
+      <div>Address</div>
+      <div>
+        <div *ngFor="let info of info?info['Address']?.split(','):info">{{info + ","}}</div>
+        <div>Phone: {{info?info['Telephone']:''}},</div>
+        <div>Email: {{info?info['Email']:''}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div>Services</div>
+      <div>{{info?.Services}}</div>
+    </div>
+    <div class="row">
+      <div>Other info</div>
+      <div>
+        <div *ngFor="let info of info?info['OtherInfo']?.split(','):info">{{info + ","}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div>status</div>
+      <div>{{info?.Type}}</div>
+    </div>
+    <div class="row">
+      <div>status</div>
+      <div>{{info?.Status}}</div>
+    </div>
+    <div class="row">
+      <div>GLN</div>
+      <div>{{info?.GLN}}</div>
+    </div>
+  </div>
+</div>

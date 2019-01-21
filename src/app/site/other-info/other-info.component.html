@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="heading">
+    <span>Site</span>
+    <span class="name">{{name}}</span>
+    <span>- other information</span>
+  </div>
+  <div>
+    <div class="bold">Dental Treatment Services Scheme ID = {{info?.id}}</div>
+    <div class="bold">{{info?info['OtherInfo']:''}}</div>
+  </div>
+  <div class="add-extra">
+    <button color="warn"
+      mat-raised-button
+      type="submit">Add new information</button>
+  </div>
+</div>

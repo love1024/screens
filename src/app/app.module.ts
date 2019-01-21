@@ -7,6 +7,8 @@ import { RouterModule} from '@angular/router';
 import { PractitionerModule } from './practitioner/practitioner.module';
 import { HomeComponent } from './core/home/home.component';
 import { CoreModule } from './core/core.module';
+import { SiteModule } from './site/site.module';
+import { SearchModule } from './search/search.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { CoreModule } from './core/core.module';
       {path: '', component: HomeComponent}
     ]),
     PractitionerModule,
+    SiteModule,
+    SearchModule,
     CoreModule
   ],
   providers: [],

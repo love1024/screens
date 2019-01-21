@@ -1,0 +1,119 @@
+<div id="form-container"
+  mat-dialog-content>
+
+  <div class="heading">
+    <span>Site</span>
+    <span class="name">{{name}}</span>
+    <span>- details</span>
+  </div>
+
+  <form [formGroup]="inputForm"
+    (ngSubmit)="onSubmit(inputForm.valid)">
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="ServiceName"
+        placeholder="Site name"
+        type="text">
+      <mat-error *ngIf="inputForm.get('ServiceName').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="Address"
+        placeholder="Site address"
+        type="text">
+      <mat-error *ngIf="inputForm.get('Address').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="XLocation"
+        placeholder="X location"
+        type="text">
+      <mat-error *ngIf="inputForm.get('XLocation').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="YLocation"
+        placeholder="Y location"
+        type="text">
+      <mat-error *ngIf="inputForm.get('YLocation').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="Phone1"
+        placeholder="Phone 1"
+        type="text">
+      <mat-error *ngIf="inputForm.get('Phone1').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="Phone2"
+        placeholder="Phone 2"
+        type="text">
+      <mat-error *ngIf="inputForm.get('Phone2').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="Phone3"
+        placeholder="Phone 3"
+        type="text">
+      <mat-error *ngIf="inputForm.get('Phone3').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput
+          formControlName="Fax"
+          placeholder="Fax"
+          type="text">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput
+          formControlName="Telephone"
+          placeholder="Site mobile"
+          type="text">
+        <mat-error *ngIf="inputForm.get('Telephone').hasError('required')">Required</mat-error>
+      </mat-form-field>
+    
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="SiteWeb"
+        placeholder="Site web"
+        type="text">
+      <mat-error *ngIf="inputForm.get('SiteWeb').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="SiteEmail"
+        placeholder="Site email"
+        type="text">
+      <mat-error *ngIf="inputForm.get('SiteEmail').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="SiteStatus"
+        placeholder="Status"
+        type="text">
+      <mat-error *ngIf="inputForm.get('SiteStatus').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-checkbox>Non-residential only</mat-checkbox>
+    <mat-checkbox>Use site name to match</mat-checkbox>
+    <mat-checkbox>not exact building</mat-checkbox>
+
+    <div>
+      <br>
+      <button color="primary"
+        mat-raised-button
+        type="submit">Update</button>
+    </div>
+  </form>
+</div>

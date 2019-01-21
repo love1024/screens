@@ -1,0 +1,28 @@
+.container {
+  width: 90%;
+  margin: 100px auto;
+}
+
+.row {
+  display: flex;
+}
+
+.practitioner-img {
+  margin-left: 10px;
+}
+
+.agency {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.agency > div {
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.agency > div:last-child {
+  color: #3F51B5;
+}
+

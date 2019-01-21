@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="agency">
+    <div>Agency:</div>
+    <div>Dental Practices</div>
+  </div>
+  <div class="row">
+    <h1>Service Directory: Location</h1>
+    <div class="practitioner-img">
+      <img src="assets/site.PNG" />
+    </div>
+  </div>
+  <mat-tab-group>
+    <mat-tab label="Summary">
+      <app-summary></app-summary>
+    </mat-tab>
+    <mat-tab label="Edit: Site Details">
+      <app-site></app-site>
+    </mat-tab>
+    <mat-tab label="Edit: Practitioners">
+      <app-practitioner></app-practitioner>
+    </mat-tab>
+    <mat-tab label="Edit: Services">
+      <app-service></app-service>
+    </mat-tab>
+    <mat-tab label="Edit: Other info">
+      <app-other-info></app-other-info>
+    </mat-tab>
+    <mat-tab label="Historical updates">
+      <ng-template matTabContent>
+        <app-historical-update></app-historical-update>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>
