@@ -22,5 +22,20 @@
 }
 
 mat-checkbox {
-  margin-right: 20px;
+  margin: 15px 20px;
+}
+
+.area-width {
+  display: block;
+  width: 50%;
+}
+
+textarea.value2 {
+  border-bottom: 2px solid green !important;
+}
+textarea.value1 {
+  border-bottom: 2px solid orange!important;
+}
+textarea.value0 {
+  border-bottom: 2px solid red !important;
 }

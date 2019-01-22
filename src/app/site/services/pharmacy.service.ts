@@ -71,4 +71,8 @@ export class PharmacyService {
   getInfoEmitter() {
     return this.infoEmitter;
   }
+
+  searchAddress(field): any {
+    return this.http.get(`https://health-directory-dev.azurewebsites.net/api/location/search?searchString=${field}`);
+  }
 }

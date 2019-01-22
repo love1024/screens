@@ -18,13 +18,18 @@
       <mat-error *ngIf="inputForm.get('ServiceName').hasError('required')">Required</mat-error>
     </mat-form-field>
 
-    <mat-form-field class="full-width">
-      <input matInput
+    <mat-form-field class="area-width">
+      <textarea matInput
+      [ngClass]="{'value0': address==0,'value1':address==1, 'value2':address==2}"
+        #area
+        (input)="searchAddress(area.value)"
         formControlName="Address"
-        placeholder="Site address"
-        type="text">
-      <mat-error *ngIf="inputForm.get('Address').hasError('required')">Required</mat-error>
+        placeholder="Site Address"></textarea>
     </mat-form-field>
+
+    <mat-checkbox>Non-residential only</mat-checkbox>
+    <mat-checkbox>Use site name to match</mat-checkbox>
+    <mat-checkbox>not exact building</mat-checkbox>
 
     <mat-form-field class="full-width">
       <input matInput
@@ -66,21 +71,21 @@
       <mat-error *ngIf="inputForm.get('Phone3').hasError('required')">Required</mat-error>
     </mat-form-field>
 
-      <mat-form-field class="full-width">
-        <input matInput
-          formControlName="Fax"
-          placeholder="Fax"
-          type="text">
-      </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="Fax"
+        placeholder="Fax"
+        type="text">
+    </mat-form-field>
 
-      <mat-form-field class="full-width">
-        <input matInput
-          formControlName="Telephone"
-          placeholder="Site mobile"
-          type="text">
-        <mat-error *ngIf="inputForm.get('Telephone').hasError('required')">Required</mat-error>
-      </mat-form-field>
-    
+    <mat-form-field class="full-width">
+      <input matInput
+        formControlName="Telephone"
+        placeholder="Site mobile"
+        type="text">
+      <mat-error *ngIf="inputForm.get('Telephone').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
     <mat-form-field class="full-width">
       <input matInput
         formControlName="SiteWeb"
@@ -105,9 +110,7 @@
       <mat-error *ngIf="inputForm.get('SiteStatus').hasError('required')">Required</mat-error>
     </mat-form-field>
 
-    <mat-checkbox>Non-residential only</mat-checkbox>
-    <mat-checkbox>Use site name to match</mat-checkbox>
-    <mat-checkbox>not exact building</mat-checkbox>
+
 
     <div>
       <br>

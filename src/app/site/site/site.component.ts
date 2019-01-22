@@ -13,6 +13,8 @@ export class SiteComponent implements OnInit {
 
   info: any;
 
+  address: number = -1;
+
   get name(): string {
     if (this.info) {
       return ` ${this.info.ServiceName} / Site ID ${this.info.SiteId}`;
@@ -38,7 +40,7 @@ export class SiteComponent implements OnInit {
   createForm() {
     this.inputForm = this.fb.group({
       ServiceName: ['', Validators.required],
-      Address: ['', Validators.required],
+      Address: [''],
       XLocation: [''],
       YLocation: [''],
       Phone1: [''],
@@ -77,6 +79,17 @@ export class SiteComponent implements OnInit {
         this.dataService.infoEmitter.next(res);
       })
     }
+  }
+
+  searchAddress(field)  {
+    this.dataService.searchAddress(field).subscribe((res) => {
+      if (res.value == 2) {
+        this.inputForm.get('Address').setValue(res.address);
+        this.inputForm.get('XLocation').setValue(res.locationx);
+        this.inputForm.get('YLocation').setValue(res.locationy);
+      } 
+      this.address = res.value;
+    })
   }
 
 }
