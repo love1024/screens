@@ -24,6 +24,10 @@ import { ServiceComponent } from './service/service.component';
       {
         path: 'site',
         component: HomeComponent
+      },
+      {
+        path: 'site/:id',
+        component: HomeComponent
       }
     ])
   ]

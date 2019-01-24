@@ -47,13 +47,16 @@ const data = {
 })
 export class PharmacyService {
 
-  private url = 'https://healthdirectorydev.azurewebsites.net/';
+  private url = 'https://health-directory-dev.azurewebsites.net/';
   infoEmitter = new BehaviorSubject(null);
+
+  id = 1;
 
   constructor(private http: HttpClient) { }
 
-  getInfo() {
-    return this.http.get(`${this.url}api/pharmacy/1`).subscribe((info) => {
+  getInfo(id) {
+    this.id = id;
+    return this.http.get(`${this.url}api/pharmacy/${id}`).subscribe((info) => {
       this.infoEmitter.next(info);
     }, (err) => {
       this.infoEmitter.next(data);
@@ -61,7 +64,7 @@ export class PharmacyService {
   }
 
   saveInfo(info) {
-    return this.http.put(`${this.url}api/pharmacy/1`, info);
+    return this.http.put(`${this.url}api/pharmacy/${this.id}`, info);
   }
 
   getHistory(MCRN) {

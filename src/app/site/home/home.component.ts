@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PharmacyService } from '../services/pharmacy.service';
+import {  ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,11 @@ import { PharmacyService } from '../services/pharmacy.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private dataService: PharmacyService) { }
+  constructor(private dataService: PharmacyService,private router: ActivatedRoute) { }
 
   ngOnInit() {
-    this.dataService.getInfo();
+    let id = this.router.snapshot.params['id'];
+    this.dataService.getInfo(id);
   }
 
 }

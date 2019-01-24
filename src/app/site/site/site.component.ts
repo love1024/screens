@@ -56,20 +56,18 @@ export class SiteComponent implements OnInit {
 
   updateForm() {
     this.inputForm.patchValue({
-      Title: this.info['Title'],
-      FirstName: this.info['FirstName'],
-      SecondName: this.info['SecondName'],
-      FamilyName: this.info['FamilyName'],
-      MCRN: this.info['MCRN'],
-      PracticesAt: this.info['PracticesAt'],
-      Status: this.info['Status'],
-      OtherInfo: this.info['OtherInfo'],
-      GSRN: this.info['GSRN'],
-      PCRSID: this.info['PCRSID'],
-      ContactDetails: {
-        PersonalPhoneNumber: this.info['ContactDetails']['PersonalPhoneNumber'],
-        PersonalEmail: this.info['ContactDetails']['PersonalEmail']
-      }
+      ServiceName: this.info['ServiceName'],
+      Address: this.info['Address'],
+      XLocation: this.info['Location']['coordinates'][0],
+      YLocation: this.info['Location']['coordinates'][1],
+      Phone1: this.info['Telephone'],
+      Phone2: [''],
+      Phone3: [''],
+      Fax: [''],
+      Telephone: this.info['Telephone'],
+      SiteWeb: [''],
+      SiteEmail: [''],
+      SiteStatus: [''],
     })
   }
 

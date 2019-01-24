@@ -14,12 +14,11 @@
         type="text">
     </mat-form-field>
       <button color="primary"
+        (click)="searchValue()"
         mat-raised-button
         type="submit">Search by name or ID</button>
   </div>
   <div class="list">
-    <div>Search result 1</div>
-    <div>Search result 2</div>
-    <div>Search result 3</div>
+    <div *ngFor="let res of result" [routerLink]="['/site/',res.id]">{{res.Address}}</div>
   </div>
 </div>
